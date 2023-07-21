@@ -165,7 +165,7 @@ ul {
 .wrapper{
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -183,11 +183,11 @@ ul {
     overflow: hidden;
     padding-left: 10px;
     display: flex;
-    text-align: center;
     justify-content: space-between;
 }
 .welcome h2{
     margin-top: 20px;
+    margin-left: 20px;
     flex-basis: calc(100% - 200px);
 }
 .welcome img{
@@ -206,7 +206,7 @@ ul {
 .body{
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 30px;
     padding: 20px;
 }
@@ -220,7 +220,7 @@ ul {
     border-radius: 10px;
     display: flex;
     text-align: center;
-    
+    justify-content: space-around;
 }
 @media (max-width: 767px){
     .body .num{
@@ -228,7 +228,7 @@ ul {
     }
 }
 .body .num i{
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 30px;
     font-size: 30px;
     color: var(--third-color);
