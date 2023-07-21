@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashboard</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
+    <div class="page d-flex">
+        <div class="side-bar p-20 ">
+            <h3>Ace</h3>
+            <ul>
+                <li>
+                    <a href="index.html" class="avtive">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" class="avtive">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login/index.html" class="avtive">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>log-out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- start header -->
+            <div class="header between-flex">
+                <div class="search">
+                    <input type="search" placeholder="type kyword" class="in-search">
+                </div>
+                <div class="icons d-flex ">
+                    <span  class="notification"></span>
+                    <i class="fa-regular fa-bell fa-lg"></i>
+                    <img src="imge/avatar_preview_rev_1.png" alt="">
+                </div>
+            </div>
+            <!-- End header -->
+            <h1>Dashboard</h1>
+            <div class="wrapper">
+                <div class="welcome">
+                    <h2>welcome</h2>
+                    <img src="imge/coding_preview.png" alt="">
+                </div>
+                
+                
+            </div>
+            <div class="body">
+                <div class="num ">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <div class="text">
+                        <h5>Like</h5>
+                        <span>65</span>
+                    </div>
+                </div>
+                <div class="num">
+                    <i class="fa-solid fa-comment"></i>
+                    <div class="text">
+                        <h5>Comment</h5>
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="num">
+                    <i class="fa-brands fa-twitter"></i>
+                    <div class="text">
+                        <h5>Tweet</h5>
+                        <span>33</span>
+                    </div>
+                </div>
+                <div class="num">
+                    <i class="fa-solid fa-eye"></i>
+                    <div class="text">
+                        <h5>Views</h5>
+                        <span>300</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
