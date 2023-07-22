@@ -1,98 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Entry page</title>
+    <link rel="stylesheet" href="css/entry1page.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
-</head>
-<body>
-    <div class="page d-flex">
-        <div class="side-bar p-20 ">
-            <h3>Ace</h3>
-            <ul>
-                <li>
-                    <a href="index.html" class="avtive">
-                        <i class="fa-solid fa-chart-simple"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html" class="avtive">
-                        <i class="fa-solid fa-user"></i>
-                        <span>Account</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="login/index.html" class="avtive">
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                        <span>log-out</span>
-                    </a>
-                </li>
-            </ul>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login</div>
+        <div class="title signup">Signup</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
         </div>
-        <div class="content">
-            <!-- start header -->
-            <div class="header between-flex">
-                <div class="search">
-                    <input type="search" placeholder="type kyword" class="in-search">
-                </div>
-                <div class="icons d-flex ">
-                    <span  class="notification"></span>
-                    <i class="fa-regular fa-bell fa-lg"></i>
-                    <img src="imge/avatar_preview_rev_1.png" alt="">
-                </div>
+        <div class="form-inner">
+          <form action="#" class="login">
+            <div class="field">
+              <input type="text" placeholder="Email Address" required id="username-login">
             </div>
-            <!-- End header -->
-            <h1>Dashboard</h1>
-            <div class="wrapper">
-                <div class="welcome">
-                    <h2>welcome</h2>
-                    <img src="imge/coding_preview.png" alt="">
-                </div>
-                
-                
+            <div class="field">
+              <input type="password" placeholder="Password" required id="password-login">
             </div>
-            <div class="body">
-                <div class="num ">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <div class="text">
-                        <h5>Like</h5>
-                        <span id="likes-num">65</span>
-                    </div>
-                </div>
-                <div class="num">
-                    <i class="fa-solid fa-comment"></i>
-                    <div class="text">
-                        <h5>Comment</h5>
-                        <span id="comments-num">3</span>
-                    </div>
-                </div>
-                <div class="num">
-                    <i class="fa-brands fa-twitter"></i>
-                    <div class="text">
-                        <h5>Tweet</h5>
-                        <span id="tweets-num">33</span>
-                    </div>
-                </div>
-                <div class="num">
-                    <i class="fa-solid fa-eye"></i>
-                    <div class="text">
-                        <h5>Views</h5>
-                        <span id="views-num">300</span>
-                    </div>
-                </div>
+          
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login" id="submit-login">
             </div>
+            <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" placeholder="Email Address" required id="email-signup">
+            </div>
+            <div class="field">
+              <input type="text" placeholder="Username" required id="username-signup">
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" required id="password-signup">
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Confirm password" required id="password-confirm-signup">
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Signup">
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-    
-    <!-- JS-->
-    <script src="javascript/script.js" type="text/javascript"> </script>
-</body>
+
+    <script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+    </script>
+    <script src="javascript/login.js" type="text/javascript"> </script>
+    <script src="javascript/signup.js" type="text/javascript"> </script>
+  </body>
 </html>

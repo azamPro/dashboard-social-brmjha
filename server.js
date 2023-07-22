@@ -24,12 +24,18 @@ let users = {
     user2: { username: 'azamPro', password: '1234',email:'azamPro@gmail.com', like: 50, comment: 10, tweet: 45, views: 200 },
     user3: { username: 'nuhaS', password: '1234',email:'nuhaS@gmail.com' ,like: 20, comment: 15, tweet: 20, views: 4000 },
     user4: { username: 'hanadi16', password: '1234ww',email:'hanoali@gmail.com', like: 100, comment: 11, tweet: 45, views: 1000 },
+    user4: { username: 'hanadi16', password: '1234ww',email:'hanoali@gmail.com', like: 100, comment: 11, tweet: 45, views: 1000 },
 
 }
 // Send users data to the client-side 
 webApp.get('/getData',(req,res)=>{
+    console.log(Object.keys(users).length)
    res.send(users)
 })
 
 
+webApp.post('addData',(req,res)=>{
+    users= {...users, ...req.body };
+    console.log(users)
+})
 
