@@ -219,3 +219,7 @@ form .btn input[type="submit"]{
   font-weight: bold;
   color: var(--main-color);
 }
+
+.error-msg{
+color: red;
+}

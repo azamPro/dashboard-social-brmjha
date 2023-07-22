@@ -1,3 +1,10 @@
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // Handle the form submission logic here
+});
 
 document.getElementById('submit-login').addEventListener('click',()=>{
     // Store user input in variables 
@@ -18,10 +25,13 @@ const retriveData = async (url = '', data = {}) => {
         // Check if the user exists + store user data 
         let userData = authentication(users, data);
 
-        if (typeof userData !== "undefined") {
+        if (typeof userData !== "undefined" && (userData.username.length !== 0 || userData.password.length !== 0 ) ) {
             // Redirct to dashboard.html page and pass data as query parameters in the URL when redirecting to another page.
-            const queryString = new URLSearchParams(userData).toString();
-            window.location.href = `dashboard.html?${queryString}`;
+           const queryString = new URLSearchParams(userData).toString();
+           window.location.href = `dashboard.html?${queryString}`;
+        }{
+            // Error message
+            addRedBordeLoginr();
         }
     
     } catch (error) {
@@ -37,3 +47,10 @@ let authentication = (users, loginCredential) => {
         }
     }
 }
+const addRedBordeLoginr=()=>{
+    // Make the password and password confirmation field red to indicate they don't match
+    let username= document.getElementById('username-login')
+    let password= document.getElementById('password-login');
+    username.style.border= "1px solid red";
+    password.style.border= "1px solid red";
+  }
