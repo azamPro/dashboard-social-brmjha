@@ -71,13 +71,6 @@
     </div>
     <!-- JS -->
     <script>
-        if (sessionStorage.getItem("sessionStarted") === "true") {
-            // The session has started
-            console.log(' started')
-        } else {
-            // The session has not started
-            console.log('not started')
-        }
         let storedUser = JSON.parse(sessionStorage.getItem("userData"));
         // Update data on an HTML page with user data +  Retrieve the object from session storage
         document.getElementById('username').innerText = storedUser.username;
