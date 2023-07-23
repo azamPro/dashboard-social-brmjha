@@ -1,0 +1,160 @@
+.header{
+    text-align: center;    
+}
+.header h1{
+    margin: 0;
+}
+.cont{
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.cont h3{
+    margin-top: 30px;
+}
+
+.click {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.click a{
+    text-decoration: none;
+    color: white;
+    border: none;
+    background-color: var(--third-color);;
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid var(--third-color);
+    transition: 0.8s;
+}
+.click a:hover{
+    background-color: var(--main-color);
+}
+.click .active{
+    background-color: var(--main-color)
+}
+.about-us{
+    margin-top: 40px;
+}
+.about-us h3{
+    color: rgb(148, 31, 31);
+}
+.about-us p{
+    color: #777;
+    margin-top: 10px;
+}
+.social-1{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Btn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+}
+
+.svgIcon {
+transition-duration: .3s;
+}
+
+.svgIcon path {
+fill: white;
+}
+
+.text {
+position: absolute;
+color: rgb(255, 255, 255);
+width: 120px;
+font-weight: 600;
+opacity: 0;
+transition-duration: .4s;
+}
+
+.Btn:hover {
+    width: 110px;
+    transition-duration: .4s;
+    border-radius: 30px;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    transition-duration: .4s;
+}
+
+.Btn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+button {
+position: relative;
+width: 130px;
+height: 35px;
+border-radius: 30px;
+background-color: white;
+border: 1px #00acee solid;
+overflow: hidden;
+}
+
+.text1 {
+font-size: 15px;
+font-weight: 600;
+margin-left: 22%;
+}
+
+.text2 {
+position: absolute;
+top: 25%;
+left: -50px;
+font-weight: 700;
+font-size: 14px;
+color: white;
+}
+
+.icon {
+position: absolute;
+top: 0;
+left: 0;
+transition: transform 0.5s;
+}
+
+.icon::before {
+position: absolute;
+left: -100px;
+top: 0;
+z-index: -1;
+content: '';
+width: 130px;
+height: 33px;
+border-radius: 30px;
+background-color: #00acee;
+}
+
+button:hover .icon {
+transform: translateX(96px);
+transition: transform 0.5s;
+}
+
+button:hover .text2 {
+transform: translateX(100px);
+transition: transform 0.6s;
+}
+
+button:active {
+transform: scale(1.03);
+}

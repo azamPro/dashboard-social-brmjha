@@ -48,7 +48,6 @@ const storData = async (url = '', data = {}) => {
     window.location.href = `dashboard.html`;
     }
   
-   
   } catch (error) {
     console.log("error", error);
   }

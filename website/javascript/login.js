@@ -27,8 +27,8 @@ const retriveData = async (url = '', data = {}) => {
 
         if (typeof userData !== "undefined" && (userData.username.length !== 0 || userData.password.length !== 0 ) ) {
             // Redirct to dashboard.html page and pass data as query parameters in the URL when redirecting to another page.
-           const queryString = new URLSearchParams(userData).toString();
-           window.location.href = `dashboard.html?${queryString}`;
+            const queryString = new URLSearchParams(userData).toString();
+            window.location.href = `dashboard.html?${queryString}`;
         }{
             // Error message
             addRedBordeLoginr();
@@ -53,4 +53,4 @@ const addRedBordeLoginr=()=>{
     let password= document.getElementById('password-login');
     username.style.border= "1px solid red";
     password.style.border= "1px solid red";
-  }
+}
