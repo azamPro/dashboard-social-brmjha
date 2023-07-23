@@ -30,6 +30,7 @@
             <div class="field">
               <input type="password" placeholder="Password" required id="password-login">
             </div>
+            <div id="error-msg-login"></div>
             <div class="field btn">
               <div class="btn-layer"></div>
               <input type="submit" value="Login" id="submit-login">
@@ -50,6 +51,7 @@
             <div class="field">
               <input type="password" placeholder="Confirm password"  id="password-confirm-signup" required>
             </div>
+            <div id="error-msg-signup"></div>
             <div class="field btn">
               <div class="btn-layer"></div>
               <input type="submit" value="Signup" id="submit-signup">
@@ -59,29 +61,29 @@
       </div>
     </div>
     <div class="footer">
-      <a href="about-us/about-us.html" style="color: white; text-decoration: none;">&copy; 2023 Made by the<span> Azam and Jawahirah and Nuha  </span></a>
+      <a href="about-us/about-us.html" style="color: white; text-decoration: none;" target="_blank">&copy; 2023 Made by the<span> Azam and Jawahirah and Nuha  </span></a>
     </div>
-    <!-- JS -->
-    <script>
-      const loginText = document.querySelector(".title-text .login");
-      const loginForm = document.querySelector("form.login");
-      const loginBtn = document.querySelector("label.login");
-      const signupBtn = document.querySelector("label.signup");
-      const signupLink = document.querySelector("form .signup-link a");
-      signupBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "-50%";
-        loginText.style.marginLeft = "-50%";
-      });
-      loginBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "0%";
-        loginText.style.marginLeft = "0%";
-      });
-      signupLink.onclick = (()=>{
-        signupBtn.click();
-        return false;
-      });
-    </script>
-    <script src="javascript/login.js" type="text/javascript"> </script>
-    <script src="javascript/signup.js" type="text/javascript"> </script>
+   <!-- JS -->
+   <script>
+    const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+    signupBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "-50%";
+      loginText.style.marginLeft = "-50%";
+    });
+    loginBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "0%";
+      loginText.style.marginLeft = "0%";
+    });
+    signupLink.onclick = (()=>{
+      signupBtn.click();
+      return false;
+    });
+  </script>
+  <script src="javascript/login.js" type="text/javascript"> </script>
+  <script src="javascript/signup.js" type="text/javascript"> </script>
   </body>
 </html>

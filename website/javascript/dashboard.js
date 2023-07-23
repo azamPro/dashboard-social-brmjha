@@ -12,6 +12,3 @@ let changeUI = () => {
 }
 
 changeUI()
-
-
-

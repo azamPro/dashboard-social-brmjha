@@ -22,14 +22,16 @@ const retriveData = async (url = '', data = {}) => {
         const users = await response.json();
         // Check if the user exists + store user data in a variable 
         let userData = authentication(users, data);
-
-        if (typeof userData !== "undefined" && (userData.username.length !== 0 || userData.password.length !== 0 ) ) {
-            // Redirct to dashboard.html page and pass data as query parameters in the URL when redirecting to another page.
-           const queryString = new URLSearchParams(userData).toString();
-           window.location.href = `dashboard.html?${queryString}`;
-        }{
+        if (typeof userData !== "undefined" &&  (userData.username.length !== 0 || userData.password.length !== 0)) {
+            // Set a session storage item
+            sessionStorage.setItem("userData", JSON.stringify(userData));
+            // Redirct to dashboard.html page
+            window.location.href = `dashboard.html`;
+        }else{
             // Error message
-            addRedBordeLoginr();
+            addRedBordeLogin();
+            document.getElementById('error-msg-login').innerText='username or password wrong'
+            
         }
 
     } catch (error) {
@@ -46,10 +48,10 @@ let authentication = (users, loginCredential) => {
         }
     }
 }
-const addRedBordeLoginr = () => {
+const addRedBordeLogin = () => {
     // Make the password and password confirmation field red to indicate they don't match
-    let username= document.getElementById('username-login')
-    let password= document.getElementById('password-login');
-    username.style.border= "1px solid red";
-    password.style.border= "1px solid red";
-  }
+    let username = document.getElementById('username-login')
+    let password = document.getElementById('password-login');
+    username.style.border = "1px solid red";
+    password.style.border = "1px solid red";
+}

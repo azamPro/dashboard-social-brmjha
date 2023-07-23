@@ -12,7 +12,12 @@ document.getElementById('submit-signup').addEventListener('click', () => {
   let passwordConfirm = document.getElementById('password-confirm-signup').value;
   // Check both field matches
   if (passwordConfirm == password) {
+    if (username.length != 0 && password.length != 0 && name.length != 0) {
     storData('http://localhost:8080/addData', { username: username, password: password, name: name, like: 0, comment: 0, tweet: 0, views: 0 });
+    }else {
+      // Error message
+      addRedBordeSignupTologinFields();
+    }
   } else {
     // Error indicator when password fields don't match
     addRedBorderToPasswords();
@@ -45,23 +50,17 @@ const storData = async (url = '', userData = {}) => {
 
     // When the username does not already exist on the server, it responds with 1
     if (status == '1') {
-      if (userData.username.length != 0 && userData.password.length != 0 && userData.name.length != 0) {
         // Set a session storage item
         sessionStorage.setItem("userData", JSON.stringify(userData));
         // Redirct to dashboard.html page 
         window.location.href = `dashboard.html`;
-
-      } else {
-        // Error message
-        addRedBordeSignupTologinFields();
-      }
     } else {
       // If the username is already taken, make the border red
       let username = document.getElementById('username-signup')
       username.style.border = "1px solid red";
+      document.getElementById('error-msg-signup').innerText='Username already taken message';
     }
-  
-   
+
   } catch (error) {
     // Show error in the console
     console.log("error", error);
@@ -69,6 +68,7 @@ const storData = async (url = '', userData = {}) => {
 };
 
 const addRedBordeSignupTologinFields = () => {
+  document.getElementById('error-msg-signup').innerText=''
   // Turn all fields' borders red in case there is an error
   addRedBorderToPasswords()
   let username = document.getElementById('username-signup')

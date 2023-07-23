@@ -21,12 +21,10 @@ webApp.listen(port, () => {
 });
 // Dummy API endpoint 
 let users = [
-     { username: 'Jawahirah', password: '1234',email:'Jawahirah@gmail.com', like: 65, comment: 3, tweet: 33, views: 300 },
-      { username: 'azamPro', password: '1234',email:'azamPro@gmail.com', like: 50, comment: 10, tweet: 45, views: 200 },
-    { username: 'nuhaS', password: '1234',email:'nuhaS@gmail.com' ,like: 20, comment: 15, tweet: 20, views: 4000 },
-     { username: 'hanadi16', password: '1234ww',email:'hanoali@gmail.com', like: 100, comment: 11, tweet: 45, views: 1000 },
-    
-
+     { username: 'Jawahirah', password: '1234',name:'Jawahira Ali', like: 65, comment: 3, tweet: 33, views: 300 },
+      { username: 'azamPro', password: '1234',name:'Azam Khaled', like: 50, comment: 10, tweet: 45, views: 200 },
+    { username: 'nuhaS', password: '1234',name:'Nuha Ali' ,like: 20, comment: 15, tweet: 20, views: 4000 },
+     { username: 'hanadi16', password: '1234ww',name:'Hanadi Azam', like: 100, comment: 11, tweet: 45, views: 1000 },
 ]
 // Check if user exist i
 let checkIfUserExist = (username) => {
@@ -41,7 +39,6 @@ let checkIfUserExist = (username) => {
 }
 // Send users data to the client-side 
 webApp.get('/getData',(req,res)=>{
-    console.log(Object.keys(users).length)
    res.send(users)
 })
 // Store new user data 

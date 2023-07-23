@@ -62,10 +62,15 @@
                 </div>
             </div>
             <div class="footer">
-                <a href="about-us/about-us.html" style="color: white; text-decoration: none;">&copy; 2023 Made by the<span> Azam and Jawahirah and Nuha  </span></a>
+                <a href="about-us/about-us.html" style="color: white; text-decoration: none;" target="_blank">&copy; 2023 Made by the<span> Azam and Jawahirah and Nuha  </span></a>
             </div>
         </div>
     </div>
+    <script>
+         let storedUser = JSON.parse(sessionStorage.getItem("userData"));
+        // Update data on an HTML page with user data +  Retrieve the object from session storage
+        document.getElementById('username').innerText = storedUser.username;
+    </script>
     
 </body>
 </html>

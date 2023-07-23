@@ -224,3 +224,9 @@ form .btn input[type="submit"]{
 .error-msg{
 color: red;
 }
+div#error-msg-login,
+div#error-msg-signup {
+  color: red;
+  margin-top: 11px;
+  font-size: 13px;
+}
