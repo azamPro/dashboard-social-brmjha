@@ -38,10 +38,12 @@ body {
     margin: 0;
     background-color: var(--main-color);
     color: white;
+
 }
 .page{
     min-height: 100vh;
 }
+
 .side-bar{
     background-color: var(--secoundry-color);
     position: relative;
@@ -118,11 +120,10 @@ ul {
 
 /* Content */
 
-.content{
+/* .content{
     overflow: hidden;
     width: 100%;
-    position: relative;
-}
+} */
 
 /* Header */
 
@@ -229,6 +230,7 @@ ul {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 30px;
     padding: 20px;
+    margin-bottom: 100px;
 }
 @media (max-width: 767px){
     .body{
@@ -272,14 +274,19 @@ ul {
 /* End content */
 
 /* Start footer */
+.content{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+}
+
 .footer{
     background-color: #1f283b98;
     color: white;
     padding: 10px 10px;
     text-align: center;
-    font-size: 18px;
-    position: absolute;
-    bottom: 0;
+    font-size: 16px;
     width: 100%;
 }
 .footer span{
