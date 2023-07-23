@@ -60,7 +60,8 @@ const storData = async (url = '', userData = {}) => {
       let username = document.getElementById('username-signup')
       username.style.border = "1px solid red";
     }
-
+  
+   
   } catch (error) {
     // Show error in the console
     console.log("error", error);
