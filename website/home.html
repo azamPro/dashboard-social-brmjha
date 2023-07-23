@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <div class="page d-flex">
         <div class="side-bar p-20 ">
-            <h3>Ace</h3>
+            <h3 id="username"></h3>
             <ul>
                 <li>
                     <a href="home.html" class="active">
@@ -48,7 +50,7 @@
                     <input type="search" placeholder="type kyword" class="in-search">
                 </div>
                 <div class="icons d-flex ">
-                    <span  class="notification"></span>
+                    <span class="notification"></span>
                     <i class="fa-regular fa-bell fa-lg"></i>
                     <a href="account.html"><img src="imge/avatar_preview_rev_1.png" alt=""></a>
                 </div>
@@ -66,5 +68,19 @@
             </div>
         </div>
     </div>
+    <!-- JS -->
+    <script>
+        if (sessionStorage.getItem("sessionStarted") === "true") {
+            // The session has started
+            console.log(' started')
+        } else {
+            // The session has not started
+            console.log('not started')
+        }
+        let storedUser = JSON.parse(sessionStorage.getItem("userData"));
+        // Update data on an HTML page with user data +  Retrieve the object from session storage
+        document.getElementById('username').innerText = storedUser.username;
+    </script>
 </body>
+
 </html>

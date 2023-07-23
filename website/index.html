@@ -9,6 +9,7 @@
   <body>
     <div class="wrapper">
       <div class="title-text">
+        <!-- Header -->
         <div class="title login">Login</div>
         <div class="title signup">Signup</div>
       </div>
@@ -21,6 +22,7 @@
           <div class="slider-tab"></div>
         </div>
         <div class="form-inner">
+          <!-- Login form -->
           <form action="#" class="login">
             <div class="field">
               <input type="text" placeholder="Username" required id="username-login">
@@ -28,16 +30,16 @@
             <div class="field">
               <input type="password" placeholder="Password" required id="password-login">
             </div>
-          
             <div class="field btn">
               <div class="btn-layer"></div>
               <input type="submit" value="Login" id="submit-login">
             </div>
             <div class="signup-link">Not a member? <a href="">Signup now</a></div>
           </form>
+          <!-- Signup form -->
           <form action="#" class="signup" id="form-signup">
             <div class="field">
-              <input type="text" placeholder="Email Address"  id="email-signup" required>
+              <input type="text" placeholder="Name"  id="name-signup" required>
             </div>
             <div class="field">
               <input type="text" placeholder="Username"  id="username-signup" required>
@@ -59,7 +61,7 @@
     <div class="footer">
       &copy; 2023 Made by the<span> best </span> teem
     </div>
-
+    <!-- JS -->
     <script>
       const loginText = document.querySelector(".title-text .login");
       const loginForm = document.querySelector("form.login");
