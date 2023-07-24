@@ -16,7 +16,7 @@ document.getElementById('submit-login').addEventListener('click', () => {
 // Retrive user data 
 const retriveData = async (url = '', data = {}) => {
     // GET HTTP request
-    const response = await await fetch(url);
+    const response = await fetch(url);
     try {
         // Contains all users data
         const users = await response.json();
