@@ -38,7 +38,6 @@ body {
     margin: 0;
     background-color: var(--main-color);
     color: white;
-
 }
 .page{
     min-height: 100vh;
@@ -120,10 +119,11 @@ ul {
 
 /* Content */
 
-/* .content{
+.content{
     overflow: hidden;
     width: 100%;
-} */
+    position: relative;
+}
 
 /* Header */
 
@@ -274,12 +274,7 @@ ul {
 /* End content */
 
 /* Start footer */
-.content{
-    overflow: hidden;
-    width: 100%;
-    position: relative;
 
-}
 
 .footer{
     background-color: #1f283b98;
@@ -287,6 +282,8 @@ ul {
     padding: 10px 10px;
     text-align: center;
     font-size: 16px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 .footer span{
